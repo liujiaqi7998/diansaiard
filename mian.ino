@@ -9,26 +9,28 @@
 void setup()
 {
     intcar();
-    Serial.begin(9600);
+//    Serial.begin(9600);
+    pinMode(P1_0, OUTPUT);
 }
 
 void loop()
 {
-    if (Serial.available() > 0)
-    {
-        char cmd = Serial.read();
-        if (cmd >= 0 && cmd <= 10)
-        {
-            Serial.print("SPEED"); //Êä³ö×´Ì¬
-            set_speed_all(cmd * 25);
-            Serial.println(cmd * 25);
-        }
-        else
-        {
-            motorRun(cmd);
-        }
-
-    }
+    digitalWrite(P1_0, HIGH);
+//    if (Serial.available() > 0)
+//    {
+//        char cmd = Serial.read();
+//        if (cmd >= 0 && cmd <= 10)
+//        {
+//            Serial.print("SPEED"); //Êä³ö×´Ì¬
+//            set_speed_all(cmd * 25);
+//            Serial.println(cmd * 25);
+//        }
+//        else
+//        {
+//            motorRun(cmd);
+//        }
+//
+//    }
 }
 
 /*
